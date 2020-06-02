@@ -119,8 +119,8 @@ public class Table extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         //Toast.makeText(getApplicationContext(), "Bàn " + myButton.getId(), Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(), Food.class);
-                        startActivity(intent);
+//                        Intent intent = new Intent(getApplicationContext(), Food.class);
+//                        startActivity(intent);
                     }
                 });
 
@@ -135,8 +135,8 @@ public class Table extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                           //  Toast.makeText(getApplicationContext(), "Bàn " + myButton2.getId(), Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(getApplicationContext(), Food.class);
-                            startActivity(intent);
+//                            Intent intent = new Intent(getApplicationContext(), Food.class);
+//                            startActivity(intent);
                         }
                     });
                     myButton2.setLayoutParams(params);

@@ -1,22 +1,13 @@
 package com.example.quanlyquancf.DoiTuong;
 
-public class FoodName {
+public class Food {
     private int hinh;
     private String Ten;
     private String gia;
 
-
-    public FoodName(int hinh, String ten, String gia) {
+    public Food(int hinh, String ten, String gia) {
         this.hinh = hinh;
         Ten = ten;
-        this.gia = gia;
-    }
-
-    public String getGia() {
-        return gia;
-    }
-
-    public void setGia(String gia) {
         this.gia = gia;
     }
 
@@ -25,7 +16,7 @@ public class FoodName {
     }
 
     public void setHinh(int hinh) {
-        this.hinh =  hinh;
+        this.hinh = hinh;
     }
 
     public String getTen() {
@@ -34,5 +25,13 @@ public class FoodName {
 
     public void setTen(String ten) {
         Ten = ten;
+    }
+
+    public String getGia() {
+        return gia;
+    }
+
+    public void setGia(String gia) {
+        this.gia = gia;
     }
 }

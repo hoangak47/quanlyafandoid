@@ -1,4 +1,4 @@
-package com.example.quanlyquancf.Lop;
+package com.example.quanlyquancf.Adapter;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -8,39 +8,34 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.quanlyquancf.DoiTuong.FoodName;
-import com.example.quanlyquancf.FoodActivity;
-import com.example.quanlyquancf.MainActivity;
+
+import com.example.quanlyquancf.DoiTuong.Food;
 import com.example.quanlyquancf.R;
 
 import java.util.ArrayList;
 
-public class Food extends RecyclerView.Adapter<Food.ViewHolder>{
-    ArrayList<FoodName> datashops;
+public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
+    ArrayList<Food> datashops;
     Context context;
 
-    public Food(ArrayList<FoodName> datashops, Context context) {
+    public FoodAdapter(ArrayList<Food> datashops, Context context) {
         this.datashops = datashops;
         this.context = context;
     }
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater= LayoutInflater.from(parent.getContext());
         View itemView = layoutInflater.inflate(R.layout.item_row,parent,false);
 
-        return new ViewHolder(itemView);
+        return new FoodAdapter.ViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
-
         holder.imageView.setImageResource(datashops.get(position).getHinh());
         holder.textView.setText(datashops.get(position).getTen());
         holder.textView2.setText(datashops.get(position).getGia());
@@ -53,8 +48,7 @@ public class Food extends RecyclerView.Adapter<Food.ViewHolder>{
         return datashops.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
-
+    public class ViewHolder extends RecyclerView.ViewHolder {
         TextView textView,textView2;
         ImageView imageView;
         public ViewHolder(@NonNull View itemView) {
