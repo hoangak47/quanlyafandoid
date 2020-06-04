@@ -36,9 +36,9 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.imageView.setImageResource(datashops.get(position).getHinh());
-        holder.textView.setText(datashops.get(position).getTen());
-        holder.textView2.setText(datashops.get(position).getGia());
+        holder.imageView.setImageResource(datashops.get(position).getImage());
+        holder.textView.setText(datashops.get(position).getName());
+        holder.textView2.setText(datashops.get(position).getPrice());
         holder.textView.setMaxLines(2);
         holder.textView.setEllipsize(TextUtils.TruncateAt.END);
     }

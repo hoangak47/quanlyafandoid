@@ -17,7 +17,7 @@ public class FoodActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_food);
+        setContentView(R.layout.activiti_food);
         initView();
     }
     public void initView()
@@ -29,17 +29,8 @@ public class FoodActivity extends AppCompatActivity {
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this, LinearLayoutManager.VERTICAL);
         recyclerView.addItemDecoration(dividerItemDecoration);
         ArrayList<Food> arrayList=new ArrayList<>();
-        arrayList.add(new Food(R.drawable.as,"asaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","2000"));
-        arrayList.add(new Food(R.drawable.as,"asd","2000"));
-        arrayList.add(new Food(R.drawable.as,"asd","2000"));
-        arrayList.add(new Food(R.drawable.as,"asd","2000"));
-        arrayList.add(new Food(R.drawable.as,"asd","2000"));
-        arrayList.add(new Food(R.drawable.as,"asd","2000"));
-        arrayList.add(new Food(R.drawable.as,"asd","2000"));
-        arrayList.add(new Food(R.drawable.as,"asd","2000"));
-        arrayList.add(new Food(R.drawable.as,"asd","2000"));
-        arrayList.add(new Food(R.drawable.as,"asd","2000"));
-        arrayList.add(new Food(R.drawable.as,"asd","2000"));
+        arrayList.add(new Food(R.drawable.as,"asaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","2000","Rỗng","0","1","-1"));
+
         FoodAdapter shopAdapter= new FoodAdapter(arrayList,getApplicationContext());
         recyclerView.setAdapter(shopAdapter);
 
