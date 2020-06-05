@@ -1,6 +1,7 @@
 package com.example.quanlyquancf.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,13 +14,18 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.quanlyquancf.DoiTuong.Food;
+import com.example.quanlyquancf.Lop.FoodActivity;
+import com.example.quanlyquancf.Lop.LoginAccount;
+import com.example.quanlyquancf.MainActivity;
 import com.example.quanlyquancf.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
     ArrayList<Food> datashops;
     Context context;
+
 
     public FoodAdapter(ArrayList<Food> datashops, Context context) {
         this.datashops = datashops;
@@ -30,13 +36,14 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater= LayoutInflater.from(parent.getContext());
         View itemView = layoutInflater.inflate(R.layout.item_row,parent,false);
-
         return new FoodAdapter.ViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.imageView.setImageResource(datashops.get(position).getImage());
+
+        Picasso.with(FoodActivity).load(datashops.get(position).getImage()).into(holder.imageView);
+//        holder.imageView.setImageBitmap(datashops.get(position).getImage());
         holder.textView.setText(datashops.get(position).getName());
         holder.textView2.setText(datashops.get(position).getPrice());
         holder.textView.setMaxLines(2);
@@ -56,6 +63,8 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
             imageView=(ImageView)itemView.findViewById(R.id.hinh);
             textView= (TextView)itemView.findViewById(R.id.txtname);
             textView2= (TextView)itemView.findViewById(R.id.txtprice);
+
+
             final TextView sl=(TextView)itemView.findViewById(R.id.soluong);
             Button tang=(Button)itemView.findViewById(R.id.btntang);
             final int[] a = {Integer.parseInt(sl.getText() + "")};
@@ -81,4 +90,6 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
 
         }
     }
+
+
 }

@@ -1,7 +1,9 @@
 package com.example.quanlyquancf.DoiTuong;
 
+import android.graphics.Bitmap;
+
 public class Food {
-    private int Image;
+    private String Image;
     private String Name;
     private String Price;
     private String Detail;
@@ -9,7 +11,7 @@ public class Food {
     private String Id;
     private String IdCategory;
 
-    public Food(int image, String name, String price, String detail, String dicount, String id, String idCategory) {
+    public Food(String image, String name, String price, String detail, String dicount, String id, String idCategory) {
         Image = image;
         Name = name;
         Price = price;
@@ -19,11 +21,11 @@ public class Food {
         IdCategory = idCategory;
     }
 
-    public int getImage() {
+    public String getImage() {
         return Image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         Image = image;
     }
 
