@@ -30,6 +30,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
     public FoodAdapter(ArrayList<Food> datashops, Context context) {
         this.datashops = datashops;
         this.context = context;
+
     }
     @NonNull
     @Override
@@ -42,7 +43,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        Picasso.with(FoodActivity).load(datashops.get(position).getImage()).into(holder.imageView);
+        Picasso.with(context).load(datashops.get(position).getImage()).into(holder.imageView);
 //        holder.imageView.setImageBitmap(datashops.get(position).getImage());
         holder.textView.setText(datashops.get(position).getName());
         holder.textView2.setText(datashops.get(position).getPrice());
