@@ -35,6 +35,13 @@ public class FoodActivity extends AppCompatActivity {
         ArrayList<Food> arrayList=new ArrayList<>();
         arrayList.add(new Food("https://i.imgur.com/Prn3FgP.png","asaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","2000","Rỗng","0","1","-1"));
         arrayList.add(new Food("https://www.tokkoro.com/picsup/2633016-spiderman-4k-high-resolution-picture.jpg","asaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","2000","Rỗng","0","1","-1"));
+        arrayList.add(new Food("https://www.tokkoro.com/picsup/2633016-spiderman-4k-high-resolution-picture.jpg","asaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","2000","Rỗng","0","1","-1"));
+        arrayList.add(new Food("https://www.tokkoro.com/picsup/2633016-spiderman-4k-high-resolution-picture.jpg","asaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","2000","Rỗng","0","1","-1"));
+        arrayList.add(new Food("https://www.tokkoro.com/picsup/2633016-spiderman-4k-high-resolution-picture.jpg","asaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","2000","Rỗng","0","1","-1"));
+        arrayList.add(new Food("https://www.tokkoro.com/picsup/2633016-spiderman-4k-high-resolution-picture.jpg","asaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","2000","Rỗng","0","1","-1"));
+        arrayList.add(new Food("https://www.tokkoro.com/picsup/2633016-spiderman-4k-high-resolution-picture.jpg","asaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","2000","Rỗng","0","1","-1"));
+        arrayList.add(new Food("https://www.tokkoro.com/picsup/2633016-spiderman-4k-high-resolution-picture.jpg","asaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","2000","Rỗng","0","1","-1"));
+        arrayList.add(new Food("https://www.tokkoro.com/picsup/2633016-spiderman-4k-high-resolution-picture.jpg","asaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","2000","Rỗng","0","1","-1"));
 
         FoodAdapter shopAdapter= new FoodAdapter(arrayList,getApplicationContext());
         recyclerView.setAdapter(shopAdapter);
